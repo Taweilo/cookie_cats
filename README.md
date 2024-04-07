@@ -1,5 +1,3 @@
-# cookie_cats
-
 # Cookie Cats
 
 [Cookie Cats](https://www.facebook.com/cookiecatsgame) is a hugely popular mobile puzzle game developed by [Tactile Entertainment](http://tactile.dk). It's a classic "connect three"-style puzzle game where the player must connect tiles of the same color to clear the board and win the level. It also features singing cats. We're not kidding! Check out this short demo [here](https://youtu.be/GaP5f0jVTWE).
@@ -28,32 +26,20 @@ The problem for the Red Wine industry is to import wine based on limited informa
 
 
 ## 2. Data Understanding
-The Wine Quality data was loaded via Jupyter Notebook. 
-Dataset is from Kaggle: https://www.kaggle.com/datasets/yasserh/wine-quality-dataset?resource=download (also please see WineQT.csv attached). Basic data analysis was performed to identify the shape of data, get column names, find missing values, and generate descriptive statistics. The Pearson correlation matrix was calculated to find the pairwise correlation of the columns in the data. All columns in the data are visually represented as histograms. A correlation heatmap figure was generated to represent the correlation matrix.
 
-* Data dictionary:
-  
-| Name | Modeling Role | Measurement Level| Description|
-| ---- | ------------- | ---------------- | ---------- |
-| **Fixed Acidity** | input | float | The amount of non-volatile acids (such as tartaric, malic, and succinic acid). These acids are important for flavor and stability, and can contribute to the wine's tartness or sourness. However, too much acidity can also make the wine taste sour or unbalanced. On the other hand, low levels of fixed acidity can make the wine taste flat or dull. |
-| **Volatile Acidity** | input | float | Taste measure, sign of winemaking quality. Higher – less control over taste. |
-| **Citric Acid** | input | float | Not typically present in significant amounts in wine, but it can be added during winemaking to adjust the wine's acidity or enhance its flavor profile. Citric acid can contribute a bright, citrusy note to the wine, which can be desirable in some styles of white wine, rosé, or sparkling wine. |
-| **Residual Sugar** | input | float | The amount of the natural grape sugars that remain in the wine after fermentation is complete. |
-| **Chlorides** | input | float | The level of chlorides in wine can have an impact on the sensory characteristics of the wine, as well as its overall quality. |
-| **Free Sulfur Dioxide** | input | float | A type of sulfur dioxide presents in wine. SO2 is added to wine during the winemaking process to protect the wine from oxidation and microbial spoilage. |
-| **Total Sulfur Dioxide** | input | float | The sum of the free and bound forms of sulfur dioxide that are present in the wine. |
-| **Density** | input | float | Density can be used to determine the alcohol content and sugar content. |
-| **pH** | input | float | 	pH is an important parameter that can affect the wine's stability, color, aroma, and taste. A wine with a low pH tends to be more refreshing, and age-worthy, while a wine with a high pH may be flatter, or dull. |
-| **Sulfates** | input | float | A chemical compound that occurs naturally at low levels during the process of wine fermentation. It is also added by many winemakers during the fermentation stage of winemaking to protect and preserve the wine's character, flavor, and color. |
-| **Alcohol**| input | float | The average alcohol content of wine is about 12%. |
-| **ID**| ID | int | The unique number of each row. |
-| **Quality**| potential target | int | Categorical value: range from 3 to 8. During the Data preparation process, we transform into binary values: above 6.5 is good; quall or below 6.5 is inferior.|
+Dataset is from Kaggle: https://www.kaggle.com/code/mursideyarkin/mobile-games-ab-testing-with-cookie-cats (also please see WineQT.csv attached). 
 
-* Statistics
- <img src="https://github.com/Taweilo/Red_Wine_Quality_Classification_Model/blob/main/Image/2.1 Data%20statistics.jpg" width="600" >
+The dataset consists of data from 90,189 players who installed the game during the AB-test period. The variables included are:
 
+- `userid`: A unique identifier for each player.
+- `version`: Indicates whether the player was in the control group (`gate_30` - a gate at level 30) or the group with the moved gate (`gate_40` - a gate at level 40).
+- `sum_gamerounds`: The number of game rounds played by each player during the first 14 days after installation.
+- `retention_1`: Indicates if the player returned to play after 1 day of installing the game.
+- `retention_7`: Indicates if the player returned to play after 7 days of installing the game.
 
-## 3. Data Preparation
+Players were randomly assigned to either the `gate_30` or `gate_40` group upon installing the game. As a sanity check, we'll verify if there are approximately equal numbers of players in each AB group.
+
+## 3. EDA
 
 
 
