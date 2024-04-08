@@ -40,29 +40,33 @@ The dataset consists of data from 90,189 players who installed the game during t
 Players were randomly assigned to either the `gate_30` or `gate_40` group upon installing the game. As a sanity check, we'll verify if there are approximately equal numbers of players in each AB group.
 
 ## 3. EDA
+| Version | Percentage |
+|---------|------------|
+| gate_40 | 50.44%     |
+| gate_30 | 49.56%     |
+It looks like there is roughly the same number of players in each group. 
 
+- The distribution of game rounds
+![CC Gates](https://github.com/Taweilo/cookie_cats/blob/main/Image/The%20distribution%20of%20game%20rounds.png)
+In the plot above we can see that some players install the game but then never play it (0 game rounds), some players just play a couple of game rounds in their first week, and some get hooked!
 
+## 4. Testing
+- 1-day retention by AB-group
+  1. 1-day retention rate for each group
+  
+  2. Bootstrapping to consider the uncertainty
+     
+  4. Compare the difference between the two groups
+  
+  5. Compare the difference between the two groups
+     
+  6. Consider the probability of bette
 
-## 4. Modeling
-* SVC
-* Logistic regression
-* KNN
-* Decision Tree
-* Random Forest
-* Random Forest with Tuning
-* Adaboost
-
-## 5. Evaluation
- <img src="https://github.com/Taweilo/Red_Wine_Quality_Classification_Model/blob/main/Image/5.1 Evaluation.jpg" width="500" >
-From the summary table, we can observe that AUC is not necessary to associate with high profits.
+## 5. Conclusion
+The bootstrap result tells us that there is strong evidence that 7-day retention is higher when the gate is at level 30 than when it is at level 40. The conclusion is: If we want to keep retention high — both 1-day and 7-day retention — we should not move the gate from level 30 to level 40. There are, of course, other metrics we could look at, like the number of game rounds played or how much in-game purchases are made by the two AB-groups. But retention is one of the most important metrics. If we don't retain our player base, it doesn't matter how much money they spend in-game.
 
 ## 6. Recommendation
-* Business Value: <br>
-From the below graph, we can easily compare the business value between the ml model (RF classifier) and the non-ml model: by considering the relationship between the true positive rate and expected profits on the two models. 
-1. RF classifier performance is better than the non-ml model.
-2. True positive rate has a positive relationship with expected profits because more good wine in the population yields more profits. Detail check with the information below the graph.
-3. Under the extreme case where the true positive rate is 0, meaning no good wine in the population, the non-ml model suffers a loss but the ml model can still make a profit. It's because ml model can predict red wine quality and discriminate the price. However, the non-ml model only produces one and only offer which is $75. Buy high sell low incurs a loss. 
-  <img src="https://github.com/Taweilo/Red_Wine_Quality_Classification_Model/blob/main/Image/6.1 Business%20value.jpg" width="600" >
+So, why is retention higher when the gate is positioned earlier? One could expect the opposite: The later the obstacle, the longer people are going to engage with the game. But this is not what the data tells us. The theory of hedonic adaptation can give one explanation for this. In short, hedonic adaptation is the tendency for people to get less and less enjoyment out of a fun activity over time if that activity is undertaken continuously. By forcing players to take a break when they reach a gate, their enjoyment of the game is prolonged. But when the gate is moved to level 40, fewer players make it far enough, and they are more likely to quit the game because they simply got bored of it.
 
  
 
