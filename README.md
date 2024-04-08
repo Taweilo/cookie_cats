@@ -42,10 +42,10 @@ Players were randomly assigned to either the `gate_30` or `gate_40` group upon i
 ## 3. EDA
 It looks like there is roughly the same number of players in each group. 
 
-    | Version | Percentage |
-    |---------|------------|
-    | gate_40 | 50.44%     |
-    | gate_30 | 49.56%     |
+  | Version | Percentage |
+  |---------|------------|
+  | gate_40 | 50.44%     |
+  | gate_30 | 49.56%     |
 
 - The distribution of game rounds
   
