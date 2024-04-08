@@ -49,22 +49,28 @@ It looks like there is roughly the same number of players in each group.
 
 - The distribution of game rounds
   
-![CC Gates](https://github.com/Taweilo/cookie_cats/blob/main/Image/The%20distribution%20of%20game%20rounds.png)
+![The distribution of game rounds](https://github.com/Taweilo/cookie_cats/blob/main/Image/The%20distribution%20of%20game%20rounds.png)
 
 In the plot above we can see that some players install the game but then never play it (0 game rounds), some players just play a couple of game rounds in their first week, and some get hooked!
 
 ## 4. Testing
 - 1-day retention by AB-group
   1. 1-day retention rate for each group
-  
+     
+  | Version | 1-day retention rate    |
+|---------|----------|
+| gate_30 | 0.448 |
+| gate_40 | 0.442 |
+
   2. Bootstrapping to consider the uncertainty
      
-  4. Compare the difference between the two groups
-  
-  5. Compare the difference between the two groups
+![Bootstrapped Means Distribution for Each AB-group]([https://github.com/Taweilo/cookie_cats/blob/main/Image/The%20distribution%20of%20game%20rounds.png](https://github.com/Taweilo/cookie_cats/blob/main/Image/Bootstrapped%20Means%20Distribution%20for%20Each%20AB-group%20-1.png)) 
      
-  6. Consider the probability of bette
-
+  4. Compare the difference between the two groups
+     
+  
+  5. Consider the probability: 0.972
+     
 ## 5. Conclusion
 The bootstrap result tells us that there is strong evidence that 7-day retention is higher when the gate is at level 30 than when it is at level 40. The conclusion is: If we want to keep retention high — both 1-day and 7-day retention — we should not move the gate from level 30 to level 40. There are, of course, other metrics we could look at, like the number of game rounds played or how much in-game purchases are made by the two AB-groups. But retention is one of the most important metrics. If we don't retain our player base, it doesn't matter how much money they spend in-game.
 
