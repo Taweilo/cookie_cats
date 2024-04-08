@@ -40,6 +40,7 @@ The dataset consists of data from 90,189 players who installed the game during t
 Players were randomly assigned to either the `gate_30` or `gate_40` group upon installing the game. As a sanity check, we'll verify if there are approximately equal numbers of players in each AB group.
 
 ## 3. EDA
+
 | Version | Percentage |
 |---------|------------|
 | gate_40 | 50.44%     |
@@ -55,6 +56,7 @@ In the plot above we can see that some players install the game but then never p
 
 ## 4. Testing
 - 1-day retention by AB-group
+  
   1. 1-day retention rate for each group
      
   | Version | 1-day retention rate    |
@@ -64,7 +66,7 @@ In the plot above we can see that some players install the game but then never p
 
   2. Bootstrapping to consider the uncertainty
      
-![Bootstrapped Means Distribution for Each AB-group]([https://github.com/Taweilo/cookie_cats/blob/main/Image/The%20distribution%20of%20game%20rounds.png](https://github.com/Taweilo/cookie_cats/blob/main/Image/Bootstrapped%20Means%20Distribution%20for%20Each%20AB-group%20-1.png)) 
+![Bootstrapped Means Distribution for Each AB-group](https://github.com/Taweilo/cookie_catsa/blob/main/Image/Bootstrapped%20Means%20Distribution%20for%20Each%20AB-group%20-1.png) 
      
   4. Compare the difference between the two groups
      
