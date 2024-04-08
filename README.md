@@ -71,7 +71,7 @@ In the plot above we can see that some players install the game but then never p
      
   ![diff](https://github.com/Taweilo/cookie_cats/blob/main/Image/%25%20Difference%20Between%20the%20Two%20AB-groups%20-%201.png)     
   
-  4. Consider the probability: 0.966 of the chance that gate-30 has a higher 1-day-retention rate
+  4. Consider the probability: 0.966 of the chance that gate-30 has a higher 1-day-retention rate than gate-40
      
 - 7-day retention by AB-group
   
@@ -90,7 +90,7 @@ In the plot above we can see that some players install the game but then never p
      
   ![diff](https://github.com/Taweilo/cookie_cats/blob/main/Image/%25%20Difference%20Between%20the%20Two%20AB-groups%20-%207.png)     
   
-  4. Consider the probability: 0.998 of the chance that gate-30 has a higher 7-day-retention rate
+  4. Consider the probability: 0.998 of the chance that gate-30 has a higher 7-day-retention rate than gate-40
      
 ## 5. Conclusion
 The bootstrap result tells us that there is strong evidence that 7-day retention is higher when the gate is at level 30 than when it is at level 40. The conclusion is: If we want to keep retention high — both 1-day and 7-day retention — we should not move the gate from level 30 to level 40. There are, of course, other metrics we could look at, like the number of game rounds played or how many in-game purchases are made by the two AB-groups. But retention is one of the most important metrics. If we don't retain our player base, it doesn't matter how much money they spend in-game.
