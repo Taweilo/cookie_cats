@@ -44,10 +44,13 @@ Players were randomly assigned to either the `gate_30` or `gate_40` group upon i
 |---------|------------|
 | gate_40 | 50.44%     |
 | gate_30 | 49.56%     |
+
 It looks like there is roughly the same number of players in each group. 
 
 - The distribution of game rounds
+  
 ![CC Gates](https://github.com/Taweilo/cookie_cats/blob/main/Image/The%20distribution%20of%20game%20rounds.png)
+
 In the plot above we can see that some players install the game but then never play it (0 game rounds), some players just play a couple of game rounds in their first week, and some get hooked!
 
 ## 4. Testing
