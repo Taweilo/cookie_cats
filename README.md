@@ -16,9 +16,9 @@ But where should the gates be placed? Initially, the first gate was placed at le
 
 ```
 ├── Image
-├── LICENSE.txt                                    <- license
-├── Red Wine Classification Project.ipynb          <- code
-├── WineQT.csv                                     <- dataset
+├── Code_cookie_cats_ab_testing.ipynb                 <- code
+├── README.md                                         <- readme
+├── cookie_cats.csv                                   <- dataset
 ```
 
 ## 1. Business Understanding
@@ -27,7 +27,7 @@ The problem for the Red Wine industry is to import wine based on limited informa
 
 ## 2. Data Understanding
 
-Dataset is from Kaggle: https://www.kaggle.com/code/mursideyarkin/mobile-games-ab-testing-with-cookie-cats (also please see WineQT.csv attached). 
+The dataset is from Kaggle: https://www.kaggle.com/code/mursideyarkin/mobile-games-ab-testing-with-cookie-cats (cookie_cats.csv). 
 
 The dataset consists of data from 90,189 players who installed the game during the AB-test period. The variables included are:
 
@@ -42,10 +42,10 @@ Players were randomly assigned to either the `gate_30` or `gate_40` group upon i
 ## 3. EDA
 It looks like there is roughly the same number of players in each group. 
 
-  | Version | Percentage |
-  |---------|------------|
-  | gate_40 | 50.44%     |
-  | gate_30 | 49.56%     |
+    | Version | Percentage |
+    |---------|------------|
+    | gate_40 | 50.44%     |
+    | gate_30 | 49.56%     |
 
 - The distribution of game rounds
   
@@ -58,10 +58,10 @@ In the plot above we can see that some players install the game but then never p
   
   1. 1-day retention rate for each group
      
-      | Version | 1-day retention rate    |
-      |---------|----------|
-      | gate_30 | 0.448 |
-      | gate_40 | 0.442 |
+        | Version | 1-day retention rate    |
+        |---------|----------|
+        | gate_30 | 0.448 |
+        | gate_40 | 0.442 |
   
   2. Bootstrapping to consider the uncertainty
   
@@ -71,16 +71,16 @@ In the plot above we can see that some players install the game but then never p
      
   ![diff](https://github.com/Taweilo/cookie_cats/blob/main/Image/%25%20Difference%20Between%20the%20Two%20AB-groups%20-%201.png)     
   
-  4. Consider the probability: 0.966
+  4. Consider the probability: 0.966 of the chance that gate-30 has a higher 1-day-retention rate
      
 - 7-day retention by AB-group
   
   1. 7-day retention rate for each group
      
-      | Version | 7-day retention rate    |
-      |---------|----------|
-      | gate_30 | 0.190 |
-      | gate_40 | 0.182 |
+        | Version | 7-day retention rate    |
+        |---------|----------|
+        | gate_30 | 0.190 |
+        | gate_40 | 0.182 |
   
   2. Bootstrapping to consider the uncertainty
      
@@ -90,10 +90,10 @@ In the plot above we can see that some players install the game but then never p
      
   ![diff](https://github.com/Taweilo/cookie_cats/blob/main/Image/%25%20Difference%20Between%20the%20Two%20AB-groups%20-%207.png)     
   
-  4. Consider the probability: 0.998
+  4. Consider the probability: 0.998 of the chance that gate-30 has a higher 7-day-retention rate
      
 ## 5. Conclusion
-The bootstrap result tells us that there is strong evidence that 7-day retention is higher when the gate is at level 30 than when it is at level 40. The conclusion is: If we want to keep retention high — both 1-day and 7-day retention — we should not move the gate from level 30 to level 40. There are, of course, other metrics we could look at, like the number of game rounds played or how much in-game purchases are made by the two AB-groups. But retention is one of the most important metrics. If we don't retain our player base, it doesn't matter how much money they spend in-game.
+The bootstrap result tells us that there is strong evidence that 7-day retention is higher when the gate is at level 30 than when it is at level 40. The conclusion is: If we want to keep retention high — both 1-day and 7-day retention — we should not move the gate from level 30 to level 40. There are, of course, other metrics we could look at, like the number of game rounds played or how many in-game purchases are made by the two AB-groups. But retention is one of the most important metrics. If we don't retain our player base, it doesn't matter how much money they spend in-game.
 
 ## 6. Recommendation
 So, why is retention higher when the gate is positioned earlier? One could expect the opposite: The later the obstacle, the longer people are going to engage with the game. But this is not what the data tells us. The theory of hedonic adaptation can give one explanation for this. In short, hedonic adaptation is the tendency for people to get less and less enjoyment out of a fun activity over time if that activity is undertaken continuously. By forcing players to take a break when they reach a gate, their enjoyment of the game is prolonged. But when the gate is moved to level 40, fewer players make it far enough, and they are more likely to quit the game because they simply got bored of it.
