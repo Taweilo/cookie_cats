@@ -60,18 +60,36 @@ In the plot above we can see that some players install the game but then never p
   1. 1-day retention rate for each group
      
   | Version | 1-day retention rate    |
-|---------|----------|
-| gate_30 | 0.448 |
-| gate_40 | 0.442 |
-
+  |---------|----------|
+  | gate_30 | 0.448 |
+  | gate_40 | 0.442 |
+  
   2. Bootstrapping to consider the uncertainty
      
-![Bootstrapped Means Distribution for Each AB-group](https://github.com/Taweilo/cookie_catsa/blob/main/Image/Bootstrapped%20Means%20Distribution%20for%20Each%20AB-group%20-1.png) 
+  ![Bootstrapped Means Distribution for Each AB-group](https://github.com/Taweilo/cookie_cats/blob/main/Image/Bootstrapped%20Means%20Distribution%20for%20Each%20AB-group%20-1.png) 
      
   4. Compare the difference between the two groups
-     
+  ![diff](https://github.com/Taweilo/cookie_cats/blob/main/Image/%25%20Difference%20Between%20the%20Two%20AB-groups%20-%201.png)     
   
-  5. Consider the probability: 0.972
+  5. Consider the probability: 0.966
+     
+- 7-day retention by AB-group
+  
+  1. 7-day retention rate for each group
+     
+  | Version | 7-day retention rate    |
+  |---------|----------|
+  | gate_30 | 0.190 |
+  | gate_40 | 0.182 |
+  
+  2. Bootstrapping to consider the uncertainty
+     
+  ![Bootstrapped Means Distribution for Each AB-group](https://github.com/Taweilo/cookie_cats/blob/main/Image/Bootstrapped%20Means%20Distribution%20for%20Each%20AB-group%20-%207.png) 
+     
+  4. Compare the difference between the two groups
+  ![diff](https://github.com/Taweilo/cookie_cats/blob/main/Image/%25%20Difference%20Between%20the%20Two%20AB-groups%20-%207.png)     
+  
+  5. Consider the probability: 0.998
      
 ## 5. Conclusion
 The bootstrap result tells us that there is strong evidence that 7-day retention is higher when the gate is at level 30 than when it is at level 40. The conclusion is: If we want to keep retention high — both 1-day and 7-day retention — we should not move the gate from level 30 to level 40. There are, of course, other metrics we could look at, like the number of game rounds played or how much in-game purchases are made by the two AB-groups. But retention is one of the most important metrics. If we don't retain our player base, it doesn't matter how much money they spend in-game.
