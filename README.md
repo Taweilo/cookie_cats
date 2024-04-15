@@ -22,13 +22,11 @@ But where should the gates be placed? Initially, the first gate was placed at le
 ```
 
 ## 1. Business Understanding
-The problem for the Red Wine industry is to import wine based on limited information. Applying the machine learning technique, we can a model for wine quality prediction, according to its chemical content. The merit of the machine learning method is cost-effective and simple (not much domain knowledge is required). Below is the number we make up for the profits evaluation:
-
+The business problem for Cookie Cats is where the gate can enhance the better customer retention. 
 
 ## 2. Data Understanding
 
 The dataset is from Kaggle: https://www.kaggle.com/code/mursideyarkin/mobile-games-ab-testing-with-cookie-cats (cookie_cats.csv). 
-
 The dataset consists of data from 90,189 players who installed the game during the AB-test period. The variables included are:
 
 - `userid`: A unique identifier for each player.
